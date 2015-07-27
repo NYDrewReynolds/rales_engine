@@ -25,6 +25,14 @@ class Api::V1::ItemsController < ApplicationController
     respond_with Item.all.sample
   end
 
+  def search
+    respond_with Item.find_by(params.first.first => params.first.last)
+  end
+
+  def search_all
+    respond_with Item.where(params.first.first => params.first.last)
+  end
+
   private
 
   def item_params

@@ -25,8 +25,12 @@ class Api::V1::MerchantsController < ApplicationController
     respond_with Merchant.all.sample
   end
 
-  def find
-    respond_with Merchant.find_by(params.first[0]: params.first[1])
+  def search
+    respond_with Merchant.find_by(params.first.first => params.first.last)
+  end
+
+  def search_all
+    respond_with Merchant.where(params.first.first => params.first.last)
   end
 
   private
