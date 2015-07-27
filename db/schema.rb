@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727195502) do
+ActiveRecord::Schema.define(version: 20150727213300) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150727195502) do
     t.string   "result"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "credit_card_expiration_date"
   end
 
   add_index "transactions", ["invoice_id"], name: "index_transactions_on_invoice_id"
