@@ -39,6 +39,10 @@ class Api::V1::ItemsController < ApplicationController
     respond_with Item.where(params.first.first => params.first.last)
   end
 
+  def merchant
+    respond_with Item.find_by(id: params[:item_id]).merchant
+  end
+
   private
 
   def item_params
