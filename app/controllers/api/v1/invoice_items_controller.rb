@@ -2,7 +2,11 @@ class Api::V1::InvoiceItemsController < ApplicationController
   respond_to :json, :xml
 
   def index
+    if params[:invoice_id]
+      respond_with InvoiceItem.where(invoice_id: params[:invoice_id])
+    else
     respond_with InvoiceItem.all
+    end
   end
 
   def show
@@ -31,6 +35,14 @@ class Api::V1::InvoiceItemsController < ApplicationController
 
   def search_all
     respond_with InvoiceItem.where(params.first.first => params.first.last)
+  end
+
+  def invoice
+    respond_with InvoiceItem.find_by(id: params[:invoice_item_id]).invoice
+  end
+
+  def item
+    respond_with InvoiceItem.find_by(id: params[:invoice_item_id]).item
   end
   private
 

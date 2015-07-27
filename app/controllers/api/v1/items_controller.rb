@@ -2,9 +2,9 @@ class Api::V1::ItemsController < ApplicationController
   respond_to :json, :xml
 
   def index
-    if params.include?("merchants")
+    if params[:merchant_id]
       respond_with Item.where(merchant_id: params[:merchant_id])
-    elsif params.include?("invoices")
+    elsif params[:invoice_id]
       respond_with Item.where(invoice_id: params[:invoice_id])
     else
       respond_with Item.all
