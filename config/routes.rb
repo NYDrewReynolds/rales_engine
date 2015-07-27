@@ -4,7 +4,10 @@ Rails.application.routes.draw do
       get 'merchants/random', to: 'merchants#random'
       get 'merchants/find', to: 'merchants#search'
       get 'merchants/find_all', to: 'merchants#search_all'
-      resources :merchants, except: [:new, :edit]
+      resources :merchants, except: [:new, :edit] do
+        resources :items, only: [:index]
+        resources :invoices, only: [:index]
+      end
 
       get 'customers/random', to: 'customers#random'
       get 'customers/find', to: 'customers#search'
@@ -19,7 +22,9 @@ Rails.application.routes.draw do
       get 'invoices/random', to: 'invoices#random'
       get 'invoices/find', to: 'invoices#search'
       get 'invoices/find_all', to: 'invoices#search_all'
-      resources :invoices, except: [:new, :edit]
+      resources :invoices, except: [:new, :edit] do
+        resources :items, only: [:index]
+      end
 
       get 'transactions/random', to: 'transactions#random'
       get 'transactions/find', to: 'transactions#search'
