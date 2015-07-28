@@ -4,4 +4,12 @@ class Customer < ActiveRecord::Base
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  def favorite_merchant
+    Merchant.find(successful.favorite_merchant)
+  end
+
+  def successful
+    invoices.successful
+  end
 end

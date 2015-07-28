@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       get 'customers/random', to: 'customers#random'
       get 'customers/find', to: 'customers#search'
       get 'customers/find_all', to: 'customers#search_all'
+      get 'customers/:id/favorite_merchant', to: 'customers#favorite_merchant'
       resources :customers, except: [:new, :edit] do
         get '/invoices', to: 'customers#invoices'
         get '/transactions', to: 'customers#transactions'
