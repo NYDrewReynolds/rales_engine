@@ -33,6 +33,26 @@ class Api::V1::MerchantsController < ApplicationController
     respond_with Merchant.where(params.first.first => params.first.last)
   end
 
+  def most_revenue
+    respond_with Merchant.most_revenue(params[:quantity].to_i)
+  end
+
+  def most_items
+    respond_with Merchant.most_items(params[:quantity].to_i)
+  end
+
+  def revenue_by_date
+    respond_with Merchant.revenue_by_date(params[:date])
+  end
+
+  def revenue
+    respond_with Merchant.find_by(id: params[:id]).total_revenue
+  end
+
+  def favorite_customer
+    respond_with Merchant.find_by(id: params[:id]).favorite_customer
+  end
+
   private
 
   def merchant_params

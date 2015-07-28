@@ -44,6 +44,7 @@ class Api::V1::InvoicesController < ApplicationController
   def merchant
     respond_with Invoice.find_by(id: params[:invoice_id]).merchant
   end
+
   private
 
   def invoice_params

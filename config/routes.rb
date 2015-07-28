@@ -4,6 +4,11 @@ Rails.application.routes.draw do
       get 'merchants/random', to: 'merchants#random'
       get 'merchants/find', to: 'merchants#search'
       get 'merchants/find_all', to: 'merchants#search_all'
+      get 'merchants/most_revenue', to: 'merchants#most_revenue'
+      get 'merchants/most_items', to: 'merchants#most_items'
+      get 'merchants/revenue', to: 'merchants#revenue_by_date'
+      get 'merchants/:id/revenue', to: 'merchants#revenue'
+      get 'merchants/:id/favorite_customer', to: 'merchants#favorite_customer'
       resources :merchants, except: [:new, :edit] do
         resources :items, only: [:index]
         resources :invoices, only: [:index]

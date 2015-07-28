@@ -40,6 +40,7 @@ class Api::V1::TransactionsController < ApplicationController
   def invoice
     respond_with Transaction.find_by(id: params[:transaction_id]).invoice
   end
+
   private
 
   def transaction_params
