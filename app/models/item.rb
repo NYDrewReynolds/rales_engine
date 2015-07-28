@@ -16,6 +16,14 @@ class Item < ActiveRecord::Base
     successful.joins(:invoice_items).sum('"invoice_items"."quantity" * "invoice_items"."unit_price"')
   end
 
+  def self.most_items(quantity)
+    all.sort_by { |item| item.total_items }.last(quantity).reverse
+  end
+
+  def total_items
+    successful.joins(:invoice_items).sum('"invoice_items"."quantity"')
+  end
+
   def successful
     invoices.successful
   end
