@@ -33,10 +33,18 @@ class Merchant < ActiveRecord::Base
     Customer.find(successful.favorite_customer)
   end
 
+  def customers_with_pending_invoices
+    failed.map { |invoice| invoice.customer}
+  end
+
   private
 
   def successful
-    invoices.successful_invoices
+    invoices.successful
+  end
+
+  def failed
+    invoices.unsuccessful
   end
 
 end

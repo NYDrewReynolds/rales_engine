@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'merchants/revenue', to: 'merchants#revenue_by_date'
       get 'merchants/:id/revenue', to: 'merchants#revenue'
       get 'merchants/:id/favorite_customer', to: 'merchants#favorite_customer'
+      get 'merchants/:id/customers_with_pending_invoices', to: 'merchants#customers_with_pending_invoices'
       resources :merchants, except: [:new, :edit] do
         resources :items, only: [:index]
         resources :invoices, only: [:index]

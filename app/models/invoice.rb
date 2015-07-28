@@ -9,8 +9,12 @@ class Invoice < ActiveRecord::Base
   validates :customer_id, presence: true
   validates :status, presence: true
 
-  def self.successful_invoices
+  def self.successful
     joins(:transactions).where(:transactions => {result:"success"})
+  end
+
+  def self.unsuccessful
+    all - successful
   end
 
   def self.favorite_customer

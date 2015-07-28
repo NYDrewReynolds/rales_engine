@@ -141,6 +141,17 @@
         null,
         null
       ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/invoice_item.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/merchant.rb": [
         1,
         1,
@@ -173,9 +184,28 @@
         0,
         null,
         null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
-      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/invoice_item.rb": [
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/item.rb": [
+        1,
         1,
         1,
         1,
@@ -190,27 +220,6 @@
         1,
         1,
         null,
-        1,
-        1,
-        null
-      ],
-      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/customer.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/item.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
         1,
         1,
         null
@@ -231,9 +240,26 @@
         0,
         null,
         null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/customer.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1438114846
+    "timestamp": 1438118232
   }
 }
