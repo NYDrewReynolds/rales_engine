@@ -32,6 +32,15 @@ class Api::V1::CustomersController < ApplicationController
   def search_all
     respond_with Customer.where(params.first.first => params.first.last)
   end
+
+  def invoices
+    respond_with Invoice.where(customer_id: params[:customer_id])
+  end
+
+  def transactions
+    respond_with Customer.find_by(id: params[:customer_id]).invoices.flat_map { |invoice| invoice.transactions }
+  end
+
   private
 
   def customer_params

@@ -11,10 +11,10 @@ Rails.application.routes.draw do
 
       get 'customers/random', to: 'customers#random'
       get 'customers/find', to: 'customers#search'
-      get 'customers/find_all', to: 'customerss#search_all'
+      get 'customers/find_all', to: 'customers#search_all'
       resources :customers, except: [:new, :edit] do
-        resources :invoices, only: [:index]
-        resources :transactions, only: [:index]
+        get '/invoices', to: 'customers#invoices'
+        get '/transactions', to: 'customers#transactions'
       end
 
       get 'items/random', to: 'items#random'
