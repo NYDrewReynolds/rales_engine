@@ -26,6 +26,7 @@ Rails.application.routes.draw do
       get 'items/random', to: 'items#random'
       get 'items/find', to: 'items#search'
       get 'items/find_all', to: 'items#search_all'
+      get 'items/most_revenue', to: 'items#most_revenue'
       resources :items, except: [:new, :edit] do
         resources :invoice_items, only: [:index]
         get '/merchant', to: 'items#merchant'
