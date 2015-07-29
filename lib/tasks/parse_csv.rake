@@ -7,7 +7,7 @@ namespace :csv do
     csv_text = File.read('./lib/assets/csv/customers.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      Customer.create(row.to_h)
+      Customer.create(row.to_h.except("id"))
     end
   end
 
@@ -15,7 +15,7 @@ namespace :csv do
     csv_text = File.read('./lib/assets/csv/merchants.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      Merchant.create(row.to_h)
+      Merchant.create(row.to_h.except("id"))
     end
   end
 
@@ -23,7 +23,7 @@ namespace :csv do
     csv_text = File.read('./lib/assets/csv/items.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      Item.create(row.to_h)
+      Item.create(row.to_h.except("id"))
     end
   end
 
@@ -31,7 +31,7 @@ namespace :csv do
     csv_text = File.read('./lib/assets/csv/invoices.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      Invoice.create(row.to_h)
+      Invoice.create(row.to_h.except("id"))
     end
   end
 
@@ -39,7 +39,7 @@ namespace :csv do
     csv_text = File.read('./lib/assets/csv/invoice_items.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      InvoiceItem.create(row.to_h)
+      InvoiceItem.create(row.to_h.except("id"))
     end
   end
 
@@ -47,7 +47,15 @@ namespace :csv do
     csv_text = File.read('./lib/assets/csv/transactions.csv')
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      Transaction.create(row.to_h)
+      Transaction.create(row.to_h.except("id", "credit_card_expiration_date"))
     end
   end
+
+  task all: :environment do
+    `rake csv:customers && rake csv:merchants && rake csv:items && rake csv:invoices && rake csv:invoice_items && rake csv:transactions`
+  end
 end
+
+# CSV.read(data_file, headers: true).each do |row|
+#   m.create!(row.to_h.except("id", "credit_card_expiration_date"))
+# end

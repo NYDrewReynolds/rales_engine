@@ -31,11 +31,11 @@ class Api::V1::ItemsController < ApplicationController
     respond_with Item.all.sample
   end
 
-  def search
+  def find
     respond_with Item.find_by(params.first.first => params.first.last)
   end
 
-  def search_all
+  def find_all
     respond_with Item.where(params.first.first => params.first.last)
   end
 
@@ -48,7 +48,7 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def most_items
-    respond_with Item.most_items(params[:quantity].to_i)
+    respond_with Item.most_items(params[:quantity].to_i).reverse
   end
 
   private
