@@ -55,7 +55,3 @@ namespace :csv do
     `rake csv:customers && rake csv:merchants && rake csv:items && rake csv:invoices && rake csv:invoice_items && rake csv:transactions`
   end
 end
-
-# CSV.read(data_file, headers: true).each do |row|
-#   m.create!(row.to_h.except("id", "credit_card_expiration_date"))
-# end
