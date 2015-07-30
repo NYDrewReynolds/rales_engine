@@ -1,6 +1,26 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/test/models/customer_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/test/models/invoice_item_test.rb": [
         1,
         null,
@@ -141,6 +161,87 @@
         null,
         null
       ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/controllers/api/v1/merchants_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
       "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/merchant.rb": [
         1,
         1,
@@ -193,14 +294,6 @@
         null,
         null
       ],
-      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/transaction.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
       "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/invoice_item.rb": [
         1,
         1,
@@ -242,23 +335,6 @@
         null,
         null
       ],
-      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/customer.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
       "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/item.rb": [
         1,
         1,
@@ -294,8 +370,33 @@
         0,
         null,
         null
+      ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/transaction.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/drewreynolds/Documents/Turing/3Module/rales_engine/app/models/customer.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
       ]
     },
-    "timestamp": 1438237974
+    "timestamp": 1438267131
   }
 }
