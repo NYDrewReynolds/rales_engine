@@ -22,7 +22,7 @@ class Merchant < ActiveRecord::Base
   end
 
   def self.revenue_by_date(date)
-    all.map
+    all.inject(0) { |sum, merchant| sum + merchant.revenue_by_date(date) }
   end
 
   def total_revenue_by_date(date)

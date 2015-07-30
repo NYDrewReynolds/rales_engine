@@ -51,6 +51,10 @@ class Api::V1::ItemsController < ApplicationController
     respond_with Item.most_items(params[:quantity].to_i).reverse
   end
 
+  def best_day
+    respond_with Item.find_by(id: params[:id]).best_day
+  end
+
   private
 
   def item_params
